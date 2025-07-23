@@ -12,4 +12,3 @@ class NetworkSecurityException(Exception):
         
     def __str__(self):
         return f"Error occurred in {self.filename} at line {self.lineno}: {self.error_message}"
-   
