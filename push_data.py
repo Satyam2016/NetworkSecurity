@@ -30,7 +30,7 @@ class NetworkDataExtract():
           try:
                data=pd.read_csv(file_path)
                data.reset_index(drop=True, inplace=True)
-               records = list(json.loads(data.T.to_dict()).values())
+               records = list(json.loads(data.T.to_json()).values())
                return records
           except Exception as e:
                raise NetworkSecurityException(e, sys)
@@ -49,3 +49,14 @@ class NetworkDataExtract():
           except Exception as e:
                raise NetworkSecurityException(e, sys)
                
+# if __name__ == "__main__":
+#      file_path= 'Network_Data/phisingData.csv'
+#      network_data = NetworkDataExtract()
+#      Database="NetworkSecurityDB"
+#      Collection="NetworkData"
+#      records= network_data.csv_to_json(file_path=file_path)
+#      lenn = network_data.insert_data_mongodb(records=records , database=Database, collection=Collection)
+#      print(records)
+#      print(lenn)
+     
+     
