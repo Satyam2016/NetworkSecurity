@@ -1,0 +1,12 @@
+2025-07-26 16:47:46,433 : 17 root INFO : Starting data ingestion process.
+2025-07-26 16:47:48,225 : 71 root INFO : Train set shape: (8844, 31), Test set shape: (2211, 31)
+2025-07-26 16:47:48,225 : 72 root INFO : Exporting train and test sets to respective file paths.
+2025-07-26 16:47:48,232 : 77 root INFO : Exporting train set to file path.
+2025-07-26 16:47:48,279 : 79 root INFO : Exported test set to file path.
+2025-07-26 16:47:48,290 : 95 root INFO : Data ingestion completed successfully.
+2025-07-26 16:47:48,359 : 32 root INFO : Required number of columns:2
+2025-07-26 16:47:48,360 : 33 root INFO : Data frame has columns:31
+2025-07-26 16:47:48,361 : 32 root INFO : Required number of columns:2
+2025-07-26 16:47:48,361 : 33 root INFO : Data frame has columns:31
+2025-07-26 16:47:48,507 : 23 root INFO : Data ingestion process completed successfully.
+2025-07-26 16:47:48,508 : 26 root INFO : Starting data transformation process.

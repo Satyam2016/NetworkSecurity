@@ -1,6 +1,6 @@
 import yaml
 from networksecurity.exception.exception import NetworkSecurityException
-import networksecurity.logging.logger as logging
+from networksecurity.logging.logger import logging
 import os
 import sys
 import numpy as np
@@ -27,4 +27,30 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
                yaml.dump(content, yaml_file)
      except Exception as e:
           logging.error(f"Error writing YAML file at {file_path}: {e}")
+          raise NetworkSecurityException(e, sys)
+     
+def save_numpy_array_data(file_path: str, array: np.array) -> None:
+     """  Save a NumPy array to a file.
+          file_path: str - Path to save the NumPy array.
+          array: np.array - NumPy array to save.
+     """
+     try:
+          dir_path = os.path.dirname(file_path)
+          os.makedirs(dir_path, exist_ok=True)
+          with open(file_path, 'wb') as file:
+               np.save(file, array)
+     except Exception as e:
+          logging.error(f"Error saving NumPy array to {file_path}: {e}")
+          raise NetworkSecurityException(e, sys)
+     
+def save_object(file_path: str, obj: object) -> None:
+     """Save an object to a file using pickle."""
+     try:
+          logging.info(f"Saving object to {file_path}")
+          dir_path = os.path.dirname(file_path)
+          os.makedirs(dir_path, exist_ok=True)
+          with open(file_path, 'wb') as file:
+               pickle.dump(obj, file)
+     except Exception as e:
+          logging.info(f"Error saving object to {file_path}: {e}")
           raise NetworkSecurityException(e, sys)
