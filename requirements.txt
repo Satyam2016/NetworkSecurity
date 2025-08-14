@@ -7,5 +7,8 @@ setuptools
 requests
 pymongo[srv]
 scikit-learn
+dill
+pyaml
+mlflow
 
 ## -e .
