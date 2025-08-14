@@ -19,6 +19,7 @@ SCHEMA_FILE_PATH = os.path.join("data_schema", "schema.yaml")
 SAVED_MODEL_DIR =  os.path.join("saved_models")
 MODEL_FILE_NAME = "model.pkl"
 
+
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
 """
@@ -51,6 +52,7 @@ DATA_TRANSFORMATION_IMPUTER_PARAMS: dict = {
      "missing_values": np.nan,
      "n_neighbors": 3,
      "weights": "uniform",
+
 }
 
 DATA_TRANSFORMATION_TRAIN_FILE_PATH: str ="train.npy"
@@ -65,3 +67,4 @@ MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
 MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD: float =0.05
+
